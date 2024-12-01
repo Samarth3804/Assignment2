@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+    }
+      
+    .box {
+        width: 200px; 
+        height: 200px; 
+        padding: 20px; 
+        border: 5px solid #4CAF50;
+        margin: 30px auto; 
+        background-color: #f0f0f0; 
+        box-sizing: border-box; 
+        transition: all 0.3s ease; 
+    }
+      
+    .box:hover {
+        border-color: #ff5722; 
+    }
+      
+    .box.clicked {
+        background-color: #4CAF50; 
+    }
+      
+    .box p {
+        margin: 0;
+        font-size: 18px;
+        color: #333;
+    }
+</style>
+
+
+    <div id="box" class="box">
+        <p>Click or Hover Me!</p>
+    </div>
+
+
+<script>
+    // Get the div element
+    const box = document.getElementById('box');
+      
+    // Add event listener for click event to change background color
+    box.addEventListener('click', function() {
+    // Toggle background color change on click
+        box.classList.toggle('clicked');
+        });
+      
+    // Add event listener for mouse enter and leave events for hover effects
+    box.addEventListener('mouseenter', function() {
+        box.style.borderColor = '#ff5722'; // Change border color on hover
+        });
+      
+    box.addEventListener('mouseleave', function() {
+            box.style.borderColor = '#4CAF50'; // Reset border color when hover ends
+        });
+</script>
+
+</body>
+</html>
